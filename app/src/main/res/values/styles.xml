@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--ZupEditText-->
+    <style name="AppTheme.ZupEditTextImage">
+        <item name="android:layout_width">@dimen/comp_zup_edit_text_width_image</item>
+        <item name="android:layout_height">@dimen/comp_zup_edit_text_height_image</item>
+        <item name="android:layout_marginEnd">@dimen/comp_zup_edit_text_image_margin_end</item>
+    </style>
+
+    <style name="AppTheme.ZupEditTextError">
+        <item name="android:layout_marginStart">@dimen/comp_zup_edit_text_marginStart_text_error</item>
+        <item name="android:layout_marginTop">@dimen/comp_zup_edit_text_marginTop_text_error</item>
+        <item name="android:layout_marginRight">@dimen/comp_zup_edit_text_marginEnd_text_error</item>
+        <item name="android:textSize">@dimen/comp_font_mentions</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.ZupEditTextTitle">
+        <item name="android:layout_marginStart">@dimen/comp_zup_edit_text_title_marginStart</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/comp_font_secundary_title</item>
+    </style>
+
+    <style name="AppTheme.ZupEditTextBorder">
+        <item name="android:layout_height">@dimen/comp_zup_edittext_height</item>"
+        <item name="android:layout_marginTop">@dimen/comp_zup_edit_text_margin_top</item>
+        <item name="android:background">@drawable/comp_rounded_black</item>
+    </style>
+
+    <style name="AppTheme.ZupEditTextEditText">
+        <item name="android:paddingStart">@dimen/little_margin</item>
+        <item name="android:paddingEnd">@dimen/short_margin</item>
+        <item name="android:textSize">@dimen/comp_font_secundary_title</item>
+        <item name="android:inputType">textVisiblePassword</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@null</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+</resources>

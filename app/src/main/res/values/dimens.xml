@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Default Margin-->
+    <dimen name="xx_largest_margin">60dp</dimen>
+    <dimen name="xxx_largest_margin">80dp</dimen>
+    <dimen name="largest_margin">48dp</dimen>
+    <dimen name="x_largest_margin">40dp</dimen>
+    <dimen name="large_margin">32dp</dimen>
+    <dimen name="edittex_margin">28dp</dimen>
+    <dimen name="medium_margin">24dp</dimen>
+    <dimen name="margin_toogle_button">22dp</dimen>
+    <dimen name="short_margin">16dp</dimen>
+    <dimen name="semi_short_margin">12dp</dimen>
+    <dimen name="little_margin">8dp</dimen>
+    <dimen name="tiny_margin">4dp</dimen>
+    <dimen name="very_tiny_margin">2dp</dimen>
+
+    <!-- Text Dimensions -->
+    <dimen name="comp_font_primary_title">25sp</dimen>
+    <dimen name="comp_font_normal_text">20sp</dimen>
+    <dimen name="comp_font_secundary_title">18sp</dimen>
+    <dimen name="comp_font_terciary_title">16sp</dimen>
+    <dimen name="comp_font_text">14sp</dimen>
+    <dimen name="comp_font_mentions">12sp</dimen>
+    <dimen name="comp_font_menu_title">10sp</dimen>
+
+    <!--ZupEditText-->
+    <dimen name="comp_zup_edit_text_margin_top">5dp</dimen>
+    <dimen name="comp_zup_edit_text_width_image">22dp</dimen>
+    <dimen name="comp_zup_edit_text_height_image">22dp</dimen>
+    <dimen name="comp_zup_edit_text_image_margin_end">8dp</dimen>
+    <dimen name="comp_zup_edit_text_marginStart_text_error">8dp</dimen>
+    <dimen name="comp_zup_edit_text_marginTop_text_error">2dp</dimen>
+    <dimen name="comp_zup_edit_text_marginEnd_text_error">8dp</dimen>
+    <dimen name="comp_zup_edit_text_title_marginStart">8dp</dimen>
+    <dimen name="comp_zup_edittext_height">50dp</dimen>
+    <dimen name="comp_marginTop_label_lupa_combobox">14dp</dimen>
+</resources>
