@@ -45,4 +45,22 @@
         <item name="android:focusable">true</item>
     </style>
 
+    <style name="AppTheme.TextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/default_text</item>
+    </style>
+
+    <style name="AppTheme.TextView.Title" parent="AppTheme.TextView">
+        <item name="android:textSize">@dimen/default_title</item>
+    </style>
+
+    <style name="AppTheme.TextView.Subtitle" parent="AppTheme.TextView">
+        <item name="android:textSize">@dimen/default_subtitle</item>
+    </style>
+
+    <style name="AppTheme.TextView.Small" parent="AppTheme.TextView">
+    <item name="android:textSize">@dimen/default_small_text</item>
+    </style>
+
+
 </resources>

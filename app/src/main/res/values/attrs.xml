@@ -7,4 +7,18 @@
         <attr name="zet_is_required" format="boolean" />
         <attr name="zet_is_blocked" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="CreditCard">
+        <attr name="crc_background" format="reference"/>
+        <attr name="crc_textColor" format="color"/>
+        <attr name="crc_icon" format="reference" />
+        <attr name="crc_card_number" format="string"/>
+        <attr name="crc_name" format="string"/>
+        <attr name="crc_balance" format="string"/>
+        <attr name="crc_expiration_date" format="string"/>
+        <attr name="crc_type">
+            <flag name="crc_horizontal" value="0" />
+            <flag name="crc_vertical" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>
