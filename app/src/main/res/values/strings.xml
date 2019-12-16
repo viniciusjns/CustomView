@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CustomView</string>
+
+    <string name="zup_edit_text">Edit Text</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="title_name">Name</string>
+    <string name="title_expiration_date">Expires</string>
+    <string name="vertical">Vertical</string>
+    <string name="horizontal">Horizontal</string>
 </resources>

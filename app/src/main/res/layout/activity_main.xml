@@ -7,83 +7,27 @@
         android:layout_height="match_parent"
         android:focusableInTouchMode="true">
 
-    <TextView
-            android:id="@+id/title"
-            android:layout_width="0dp" android:layout_height="wrap_content"
-            android:text="Custom Views"
-            android:gravity="center"
-            android:padding="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    <br.com.zup.components.ui.ZupEditText
-            android:id="@+id/zet"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            app:zet_title="E-mail"
-            app:zet_title_color="@color/colorAccent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    <Switch
-            android:id="@+id/swError"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="8dp"
-            android:switchPadding="8dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Error"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/zet"/>
-
-    <Switch
-            android:id="@+id/swBlocked"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="8dp"
-            android:switchPadding="8dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Blocked"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/swError"/>
-
-    <Switch
-            android:id="@+id/swRequired"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="8dp"
-            android:switchPadding="8dp"
-            android:textColor="@color/colorPrimary"
-            android:text="Required"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/swBlocked"/>
 
     <Button
-            android:id="@+id/btGetText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Get Text"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/swRequired"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+        android:id="@+id/bt_zup_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/zup_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/bt_credit_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-            android:id="@+id/tvGetText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
-            app:layout_constraintTop_toBottomOf="@+id/btGetText"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="teste"/>
+
+    <Button
+        android:id="@+id/bt_credit_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/credit_card"
+        app:layout_constraintTop_toBottomOf="@id/bt_zup_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </android.support.constraint.ConstraintLayout>

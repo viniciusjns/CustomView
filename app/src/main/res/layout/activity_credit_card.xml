@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <br.com.zup.components.ui.CreditCard
+            android:id="@+id/credit_card"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:crc_card_number="4276  5842  1111  8014"
+            app:crc_name="JOSE R NUNES NETO"
+            app:crc_balance="R$5000,00"
+            app:crc_expiration_date="11/23"
+            app:crc_type="crc_horizontal"
+            app:crc_icon="@drawable/ic_visa"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <Button
+            android:id="@+id/bt_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bt_vertical"
+            app:layout_constraintTop_toBottomOf="@id/credit_card"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <Button
+            android:id="@+id/bt_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vertical"
+            app:layout_constraintStart_toEndOf="@id/bt_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/credit_card"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
+

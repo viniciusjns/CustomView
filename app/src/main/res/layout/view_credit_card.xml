@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="android.support.constraint.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent=".3"
+        android:layout_marginStart="@dimen/small_margin"
+        app:layout_constraintBottom_toTopOf="@id/tv_credit_card_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_mastercard" />
+
+    <TextView
+        android:id="@+id/tv_balance"
+        style="@style/AppTheme.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:gravity="end|center"
+        app:layout_constraintStart_toEndOf="@id/iv_logo"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Balance R$5000,00" />
+
+    <TextView
+        android:id="@+id/tv_credit_card_number"
+        style="@style/AppTheme.TextView.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tv_title_name"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        tools:text="4276  5842  1111  8014" />
+
+    <TextView
+        android:id="@+id/tv_title_name"
+        style="@style/AppTheme.TextView.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:gravity="start|center"
+        android:text="@string/title_name"
+        app:layout_constraintBottom_toTopOf="@id/tv_name"
+        app:layout_constraintEnd_toStartOf="@id/tv_title_expiration_date"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_credit_card_number" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/AppTheme.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/micro_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:gravity="start|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_title_expiration_date"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+        tools:text="JOSE R NUNES NETO" />
+
+
+    <TextView
+        android:id="@+id/tv_title_expiration_date"
+        style="@style/AppTheme.TextView.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center"
+        android:text="@string/title_expiration_date"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/tv_title_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_credit_card_number"
+        app:layout_constraintTop_toTopOf="@id/tv_title_name" />
+
+    <TextView
+        android:id="@+id/tv_expiration_date"
+        style="@style/AppTheme.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|center"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_expiration_date"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        tools:text="11/20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/big_margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/big_margin" />
+
+</merge>
