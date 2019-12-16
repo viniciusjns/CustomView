@@ -10,29 +10,20 @@ import android.view.LayoutInflater
 import br.com.zup.components.R
 import kotlinx.android.synthetic.main.zup_edit_text.view.*
 
-class ZupEditText : ConstraintLayout {
+class ZupEditText @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var isRequired = false
     private var isBlocked = false
 
-    constructor(context: Context) : super(context) {
-        init(context, null)
-    }
-
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        init(context, attrs)
-    }
-
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        init(context, attrs)
-    }
-
-    fun init(context: Context, attrs: AttributeSet?) {
+    init {
         LayoutInflater.from(context)
             .inflate(R.layout.zup_edit_text, this, true)
         var typedArray: TypedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.ZupEditText, 0, 0)
 
         zetTitle.text = typedArray.getString(R.styleable.ZupEditText_zet_title)
+        zetTitle.setTextColor(typedArray.getInteger(R.styleable.ZupEditText_zet_title_color, ContextCompat.getColor(context, R.color.colorPrimary)))
         zetError.text = typedArray.getString(R.styleable.ZupEditText_zet_error)
 
         isRequired = typedArray.getBoolean(R.styleable.ZupEditText_zet_is_required, false)
@@ -57,7 +48,6 @@ class ZupEditText : ConstraintLayout {
         zetText.isEnabled = !isBlocked
         zetText.isClickable = !isBlocked
         invalidate()
-//        requestLayout()
     }
 
     fun setIsRequired(isRequired: Boolean) {
@@ -66,6 +56,10 @@ class ZupEditText : ConstraintLayout {
         else
             zetTitle.text = zetTitle.text.substring(0, zetTitle.text.length - 1)
         invalidate()
-//        requestLayout()
+    }
+
+    fun setTitleColor(color: Int) {
+        zetTitle.setTextColor(color)
+        invalidate()
     }
 }
