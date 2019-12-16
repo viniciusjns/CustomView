@@ -2,7 +2,7 @@
 <resources>
     <declare-styleable name="ZupEditText">
         <attr name="zet_title" format="string" />
-        <attr name="zet_text" format="string" />
+        <attr name="zet_title_color" format="integer" />
         <attr name="zet_error" format="string" />
         <attr name="zet_is_required" format="boolean" />
         <attr name="zet_is_blocked" format="boolean" />
