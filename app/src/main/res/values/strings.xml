@@ -7,4 +7,5 @@
     <string name="title_expiration_date">Expires</string>
     <string name="vertical">Vertical</string>
     <string name="horizontal">Horizontal</string>
+    <string name="include">Include + Data Binding</string>
 </resources>

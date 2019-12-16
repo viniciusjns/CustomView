@@ -16,8 +16,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ZupEditTextActivity::class.java))
         }
 
-       bt_credit_card.setOnClickListener {
-           startActivity(Intent(this, CreditCardActivity::class.java))
-       }
+        bt_credit_card.setOnClickListener {
+            startActivity(Intent(this, CreditCardActivity::class.java))
+        }
+
+        bt_include.setOnClickListener {
+            startActivity(Intent(this, IncludeActivity::class.java))
+        }
     }
 }
