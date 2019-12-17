@@ -13,6 +13,7 @@
         android:layout_height="50dp"
         app:layout_constraintWidth_percent=".3"
         android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/micro_margin"
         app:layout_constraintBottom_toTopOf="@id/tv_credit_card_number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

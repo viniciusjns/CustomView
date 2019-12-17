@@ -49,4 +49,8 @@
     <dimen name="default_small_text">13sp</dimen>
     <dimen name="default_micro_text">11sp</dimen>
     <dimen name="default_radius_button">30dp</dimen>
+
+    <dimen name="credit_card_width">300dp</dimen>
+    <dimen name="credit_card_vertical_width">260dp</dimen>
+
 </resources>

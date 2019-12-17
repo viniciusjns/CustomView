@@ -5,24 +5,20 @@ import android.graphics.drawable.Drawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.view.Gravity
+import android.view.Gravity.*
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import br.com.zup.components.R
 import kotlinx.android.synthetic.main.view_credit_card.view.*
-import kotlinx.android.synthetic.main.view_credit_card.view.iv_logo
-import kotlinx.android.synthetic.main.view_credit_card.view.tv_balance
-import kotlinx.android.synthetic.main.view_credit_card.view.tv_credit_card_number
-import kotlinx.android.synthetic.main.view_credit_card.view.tv_expiration_date
-import kotlinx.android.synthetic.main.view_credit_card.view.tv_name
-import kotlinx.android.synthetic.main.view_credit_card.view.tv_title_expiration_date
-import kotlinx.android.synthetic.main.view_credit_card.view.tv_title_name
 
 class CreditCard @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : ConstraintLayout(context, attrs) {
 
-    companion object{
+    companion object {
         const val HORIZONTAL = 0
         const val VERTICAL = 1
     }
@@ -81,15 +77,14 @@ class CreditCard @JvmOverloads constructor(
             }
             typeArray.recycle()
         }
-
     }
 
     fun setCreditCardBackground(drawable: Drawable?) {
         this.view.background = drawable
     }
 
-    fun setOrientation(orientation: Int){
-        when(orientation){
+    fun setOrientation(orientation: Int) {
+        when (orientation) {
             0 -> setHorizontalOrientation()
 
             1 -> setVerticalOrientation()
@@ -125,7 +120,9 @@ class CreditCard @JvmOverloads constructor(
         this.view.tv_expiration_date.text = expirationDate
     }
 
-    private fun setHorizontalOrientation(){
+    private fun setHorizontalOrientation() {
+        setResize(context.getDimen(R.dimen.credit_card_width).toInt())
+
         tvTitleName.layoutParams = tvTitleName.getConstraintLayoutParams().apply {
             startToStart = guidelineStart
             topToBottom = tvCreditCardNumber.id
@@ -154,6 +151,13 @@ class CreditCard @JvmOverloads constructor(
             topToBottom = tvTitleExpireDate.id
             topToTop = tvName.id
             bottomToTop = -1
+
+            setMargins(
+                0,
+                0,
+                0,
+                0
+            )
         }
 
         tvBalance.layoutParams = tvBalance.getConstraintLayoutParams().apply {
@@ -172,8 +176,12 @@ class CreditCard @JvmOverloads constructor(
 
     }
 
-    private fun setVerticalOrientation(){
-        tvTitleName.layoutParams =  tvTitleName.getConstraintLayoutParams().apply {
+    private fun setVerticalOrientation() {
+        setResize(context.getDimen(R.dimen.credit_card_vertical_width).toInt())
+
+        tvCreditCardNumber.gravity = START or CENTER
+
+        tvTitleName.layoutParams = tvTitleName.getConstraintLayoutParams().apply {
             startToStart = guidelineStart
             topToBottom = tvCreditCardNumber.id
             endToStart = -1
@@ -196,7 +204,14 @@ class CreditCard @JvmOverloads constructor(
             startToStart = guidelineStart
             endToEnd = -1
             topToTop = -1
-            bottomToTop = tvBalance.id
+            bottomToTop = -1
+
+            setMargins(
+                0,
+                context.getDimen(R.dimen.micro_margin).toInt(),
+                0,
+                0
+            )
         }
 
         tvBalance.layoutParams = tvBalance.getConstraintLayoutParams().apply {
@@ -215,6 +230,16 @@ class CreditCard @JvmOverloads constructor(
         }
 
     }
+
+    private fun setResize(width: Int, height: Int = WRAP_CONTENT) {
+        this.post {
+            this.layoutParams = this.layoutParams.apply {
+                this.width = width
+                this.height = height
+            }
+        }
+    }
+
 
 }
 
