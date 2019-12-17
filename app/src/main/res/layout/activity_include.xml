@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/progress1"
+            layout="@layout/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            app:progress="@{50}"/>
+
+        <include
+            android:id="@+id/progress2"
+            layout="@layout/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:progress="@{75}"/>
+
+        <include
+            android:id="@+id/progress3"
+            layout="@layout/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progress="@{100}"/>
+
+    </LinearLayout>
+</layout>
